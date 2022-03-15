@@ -13,22 +13,75 @@ body {font-family: "Lato", sans-serif}
 </style>
 </head>
 <body>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <button id="homeButton" class="w3-bar-item w3-button w3-padding-large">HOME</button>
+        <script type="text/javascript">
+          document.getElementById("homeButton").onclick = function () {
+            location.href = "jameswolfeblog.com";
+            }
+          </script>
+          <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">WORKS</button>
+            <script type="text/javascript">
+              document.getElementById("worksButton").onclick = function () {
+                location.href = "works.html";
+                }
+              </script>
+              <button id="forumButton" class="w3-bar-item w3-button w3-padding-large">FORUM</button>
+                <script type="text/javascript">
+                  document.getElementById("forumButton").onclick = function () {
+                    location.href = "forum.html";
+                    }
+                  </script>
+                  <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">CONTACT</button>
+                    <script type="text/javascript">
+                      document.getElementById("contactButton").onclick = function () {
+                        location.href = "jameswolfeblog.com";
+                        }
+                      </script>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="jameswolfeblog.com" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="pages/works.html" href="works.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WORKS</a>
-    <a href="pages/forum.html" href="forum.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">FORUM</a>
-    <a href="jameswolfeblog.com" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+      <!--
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More"><i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button"></a>
+          <a href="#" class="w3-bar-item w3-button"></a>
+          <a href="#" class="w3-bar-item w3-button"></a>
+        </div>
+      -->
+      </div>
     </div>
-    </div>
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-      <a href="pages/works.html" href="works.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">WORKS</a>
-      <a href="pages/forum.html" href="forum.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">FORUM</a>
-      <a href="jameswolfeblog.com" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-    </div>
+  </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <button id="homeButton" class="w3-bar-item w3-button w3-padding-large">HOME</button>
+      <script type="text/javascript">
+        document.getElementById("homeButton").onclick = function () {
+          location.href = "jameswolfeblog.com";
+          }
+        </script>
+        <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">WORKS</button>
+          <script type="text/javascript">
+            document.getElementById("worksButton").onclick = function () {
+              location.href = "works.html";
+              }
+            </script>
+            <button id="forumButton" class="w3-bar-item w3-button w3-padding-large">FORUM</button>
+              <script type="text/javascript">
+                document.getElementById("forumButton").onclick = function () {
+                  location.href = "forum.html";
+                  }
+                </script>
+                <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">CONTACT</button>
+                  <script type="text/javascript">
+                    document.getElementById("contactButton").onclick = function () {
+                      location.href = "jameswolfeblog.com";
+                      }
+                    </script>
+  </div>
 
     <div class="w3-content" style="max-width:2000px;margin-top:46px">
       <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
