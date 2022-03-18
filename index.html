@@ -4,9 +4,10 @@
 <title>Blog | James Wolfe</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/w3style.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/min.css">
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -23,22 +24,22 @@ body {font-family: "Lato", sans-serif}
           location.href = "index.html";
           }
         </script>
-        <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">WORKS</button>
+        <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">Wolfe.James.J96@gmail.com</button>
           <script type="text/javascript">
             document.getElementById("worksButton").onclick = function () {
-              location.href = "pages/works.html";
+              location.href = "#0";
               }
             </script>
-            <button id="forumButton" class="w3-bar-item w3-button w3-padding-large">FORUM</button>
+            <button id="forumButton" class="w3-bar-item w3-button w3-padding-large">Github</button>
               <script type="text/javascript">
                 document.getElementById("forumButton").onclick = function () {
-                  location.href = "pages/forum.html";
+                  window.open('https://github.com/profWolfe/jameswolfeblog', '_blank').focus();
                   }
                 </script>
-                <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">CONTACT</button>
+                <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">LinkedIn</button>
                   <script type="text/javascript">
                     document.getElementById("contactButton").onclick = function () {
-                      location.href = "index.html";
+                      window.open('https://www.linkedin.com/in/james-wolfe-6420151aa/', '_blank').focus();
                       }
                     </script>
 
@@ -63,26 +64,161 @@ body {font-family: "Lato", sans-serif}
         location.href = "index.html";
         }
       </script>
-      <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">WORKS</button>
+      <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">Wolfe.James.J96@gmail.com</button>
         <script type="text/javascript">
           document.getElementById("worksButton").onclick = function () {
-            location.href = "pages/works.html";
+            location.href = "#0";
             }
           </script>
-          <button id="forumButton" class="w3-bar-item w3-button w3-padding-large">FORUM</button>
+          <button id="forumButton" class="w3-bar-item w3-button w3-padding-large">GitHub</button>
             <script type="text/javascript">
               document.getElementById("forumButton").onclick = function () {
-                location.href = "pages/forum.html";
+                window.open('https://github.com/profWolfe/jameswolfeblog', '_blank').focus();
                 }
               </script>
-              <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">CONTACT</button>
+              <button id="linkedinButton" class="w3-bar-item w3-button w3-padding-large">LinkedIn</button>
                 <script type="text/javascript">
-                  document.getElementById("contactButton").onclick = function () {
-                    location.href = "#0";
-                    location.href = "index.html";
+                  document.getElementById("linkedinButton").onclick = function () {
+                    window.open('https://www.linkedin.com/in/james-wolfe-6420151aa/', '_blank').focus();
                     }
                   </script>
 </div>
+
+<style>
+header {
+  overflow: hidden;
+  height: 80px;
+  width: 100%;
+  position: fixed; z-index:500; width:100%; top:0;
+}
+header h1 span {
+  overflow: hidden;
+  display: inline-block;
+  background: rgba(255,255,255,0.5);
+  color: #000;
+  width: 28px;
+  text-align: center;
+  margin: 0 2px;
+}
+header h1 {
+  overflow: hidden;
+  padding:10px 0;
+  margin:0;
+  font: 300 30px/60px 'Roboto', arial, sans-serif;
+  color: #fff;
+}
+header h1 a {
+  overflow: hidden;
+  color:#fff;
+  text-decoration:none;
+}
+header p {
+  padding: 0;
+  margin: 0;
+  font: 200 30px/80px 'Great Vibes', arial, sans-serif;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  transform: translateX(-50%);
+}
+header .search-icon {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  width: 65px;
+}
+@media only screen and (max-width: 600px) {
+header p {display:none;}
+}
+
+@supports (-webkit-touch-callout: none) {
+:root { --vht: calc(100vh - 80px);}
+}
+
+@supports not (-webkit-touch-callout: none) {
+:root { --vht: 100vh;}
+}
+html, body {width:100%; height:var(--vht); padding:0; margin:0; overflow:hidden; background:transparent;}
+
+.vertical {
+width:100%;
+height:var(--vht);
+display:grid;
+grid-template-columns: 100% 100%;
+grid-template-rows: repeat(100vh);
+position:relative;
+overflow: scroll;
+overflow-y: hidden;
+scroll-snap-type: y mandatory;
+}
+.vertical div.stick {
+display:block;
+width:100%; height:var(--vht);
+position:sticky; top:0;
+}
+.vertical div:first-child {z-index:0;}
+.vertical div.stick img {width:100%; height:var(--vht); object-fit:cover;}
+
+.vertical div.snap {width:100%; display: grid; position:relative; left:-100%; overflow:hidden; content-visibility:auto;
+scroll-snap-align: start;
+scroll-snap-stop: always;
+}
+.snap2 {
+  position: relative;
+}
+.vertical div.snap h3 {position:absolute; bottom:250px; width:400px; padding:10px; left:calc(50% - 200px); color:#00000; text-align:center; font:20px/25px arial, sans-serif; background:#fff; border-radius:10px;}
+.vertical div.stick h1 {position:absolute; padding:0; margin:0; bottom:0; left:calc(50% - 160px); width:320px; background:#fff; text-align:center; font:600 45px/90px arial, sans-serif; border-radius:10px 10px 0 0; color:#000;}
+.vertical div.snap .info {width:95%; max-width:700px; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:50px; padding:30px;}
+.vertical div.snap .info h1 {padding:0; margin:0; font:400 100px/200px arial, sans-serif; color:#fff; text-align:center; text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;}
+.vertical div.snap .info p {font:200 25px/50px arial, sans-serif; color:#fff;text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;}
+</style>
+
+<center>
+         <div class="vertical" style="overflow-y: scroll;">
+       			<div class="stick"><img src="images/image.jpg"></div><div class="snap"><div class="info"><h1>ABLOG</h1><center><p>By James Wolfe</p></center><p></p></div></div>
+            <div class="stick"><h1>ABOUTME</h1></div><div class="snap"><h3>I'm a passioante computer science major with years of computer technology expierince with a enthusiastic look on learning every time I start something new. Fleshing out; developing, and publishing websites is fun for me and I can utilize neat services like the AWS Cloud and Github pages. My creative and problem-solving side is a great fit for technical professions. If you believe I could be a great fit for your team I would love to have a chat with you about potential opportunities, please email or message me on any social media platforms I provided.</h3></div>
+       			<div class="stick"><h1>WORKS</h1></div><div class="snap">
+              <h3><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/" target="_blank">AWS Cloud Website Portfolio</a>
+              <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.
+              <br><br>
+              <a href="https://portfolioazure.z13.web.core.windows.net/" target="_blank">Azure Static Website Portfolio</a>
+              <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.
+              </h3>
+              </div>
+              <div class="stick"><h1></h1></div><div class="snap">
+                <h3><a href="http://wolfejamesportfolio.surge.sh/" target="_blank">Surge Static Website portfolio</a>
+                  <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.
+                  <br><br>
+                  <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank">Wix Static Website Portfolio</a>
+                  <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.
+                  </h3>
+                  </div>
+       			        <div class="stick"><h1>CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
+                      <h3>Pursing: Linux Administration Boot-camp
+                        <br>January 2022 - Present <br>
+                      <br><br>AWS Cloud Practitioner
+                      <br>September 2020 - September 2023
+                      <br>Credential ID: 7BEZSG02PNEEQ83D
+                      <br><br>CTECS National Readiness Skills
+                      <br>2015 - Present
+                      <br><br>UC Davis Veterinary Program at the University of California
+                      <br>2015-2017
+                      </h3>
+                      </div>
+       			            <div class="stick"><h1>SKILLS</h1></div><div class="snap">
+                        <h3>Hardware and software troubleshooting
+                        <br><br>HTML, css, and javascript
+                        <br><br>Microsoft office Services
+                        <br><br>AWS Cloud services
+                        <br><br>Azure Cloud
+                        <br><br>Node.js
+                        <br><br>Jekyll
+                        <br><br>Git
+                        </h3>
+                        </div>
+       	                </div>
+</center>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
@@ -91,8 +227,7 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-display-container w3-center">
     <img src="images/image.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>ABlog</h3>
-      <p><b>By James Wolfe</b></p>
+
     </div>
   </div>
 
