@@ -37,22 +37,16 @@ body {font-family: "Lato", sans-serif}
                   window.open('https://github.com/profWolfe/jameswolfeblog', '_blank').focus();
                   }
                 </script>
-                <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">LinkedIn</button>
-                  <script type="text/javascript">
-                    document.getElementById("contactButton").onclick = function () {
-                      window.open('https://www.linkedin.com/in/james-wolfe-6420151aa/', '_blank').focus();
-                      }
-                    </script>
-
-    <!--
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More"><i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button"></a>
-        <a href="#" class="w3-bar-item w3-button"></a>
-        <a href="#" class="w3-bar-item w3-button"></a>
+        <button id="cvButton" class="w3-bar-item w3-button w3-padding-large">CV</button>
+          <script type="text/javascript">
+            document.getElementById("cvButton").onclick = function () {
+              window.open('ResumeJWv2.pdf', '_blank').focus();
+              }
+            </script>
       </div>
-    -->
     </div>
   </div>
 </div>
@@ -267,46 +261,7 @@ function cb(response) {
     <p class="w3-justify">Hello welcome to my blog, I'm a passionate computer science graduate, I enjoy all things tech. Developing new skills and
         becoming the best I can be is what I strive for everyday. A few of my hobbies are aquariums and playing the guitar, I have a 40 gallon
       breeder tank with 7 madagascar rainbow fish with flourished fully planted tank.</p>
-    <!--
-    <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <p>Referbishing Antiques</p>
-        <img src="antique.jpg" class="w3-round w3-margin-bottom" style="width:60%"></img>
-      </div>
-      <div class="w3-third">
-        <p>Computer Troubleshooting</p>
-        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom"style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Aquarium Maintinance</p>
-        <img src="aquarium.jpg" class="w3-round"style="width:60%"></img>
-      </div>
-    </div>
-  -->
   </div>
-
-  <!-- The Tour Section -->
-
-  <!-- Ticket Modal
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32">
-        <span onclick="document.getElementById('ticketModal').style.display='none'"
-       class="w3-button w3-teal w3-xlarge w3-display-topright">&times;</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-      </div>
-    </div>
-  </div>
--->
 
   <!-- The Contact Section -->
   <center><div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
@@ -320,43 +275,11 @@ function cb(response) {
         <i class="" style="width:30px"></i>https://www.linkedin.com/in/james-wolfe-6420151aa/<br>
       </div>
     </center>
-      <!--
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
-    -->
     </div>
   </div>
 
 <!-- End Page Content -->
 </div>
-
-<!--
-<!-- Image of location/map
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
-
-<!-- Footer
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
--->
 <script>
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
