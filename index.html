@@ -24,16 +24,10 @@ body {font-family: "Lato", sans-serif}
         document.getElementById("homeButton").onclick = function () {
           location.href = "index.html";
           }
-        </script>
-        <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">Wolfe.James.J96@gmail.com</button>
-          <script type="text/javascript">
-            document.getElementById("worksButton").onclick = function () {
-              location.href = "#0";
-              }
-            </script>
-            <button id="forumButton" class="w3-bar-item w3-button w3-padding-large">Github</button>
+          </script>
+            <button id="githubButton" class="w3-bar-item w3-button w3-padding-large">Github</button>
               <script type="text/javascript">
-                document.getElementById("forumButton").onclick = function () {
+                document.getElementById("githubButton").onclick = function () {
                   window.open('https://github.com/profWolfe/jameswolfeblog', '_blank').focus();
                   }
                 </script>
@@ -42,17 +36,12 @@ body {font-family: "Lato", sans-serif}
                     document.getElementById("linkedinButton").onclick = function () {
                       window.open('https://www.linkedin.com/in/james-wolfe-6420151aa/', '_blank').focus();
                       }
-                    </script>
+                      </script>
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More"><i class="fa fa-caret-down"></i></button>
+      <button class="w3-padding-large w3-button" title="More">Contact Me<i class="fa fa-caret-dow"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <button id="cvButton" class="w3-bar-item w3-button w3-padding-large">CV</button>
-          <script type="text/javascript">
-            document.getElementById("cvButton").onclick = function () {
-              window.open('ResumeJWv2.pdf', '_blank').focus();
-              }
-            </script>
-      </div>
+        <h4 style="padding-left:20px; padding-right:10px;">Wolfe.James.J96@gmail.com</h4>
+        <h4 style="padding-left:20px;">(703)789-0919</h4>
     </div>
   </div>
 </div>
@@ -60,29 +49,6 @@ body {font-family: "Lato", sans-serif}
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <button id="homeButton" class="w3-bar-item w3-button w3-padding-large">HOME</button>
-    <script type="text/javascript">
-      document.getElementById("homeButton").onclick = function () {
-        location.href = "index.html";
-        }
-      </script>
-      <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">Wolfe.James.J96@gmail.com</button>
-        <script type="text/javascript">
-          document.getElementById("worksButton").onclick = function () {
-            location.href = "#0";
-            }
-          </script>
-          <button id="forumButton" class="w3-bar-item w3-button w3-padding-large">GitHub</button>
-            <script type="text/javascript">
-              document.getElementById("forumButton").onclick = function () {
-                window.open('https://github.com/profWolfe/jameswolfeblog', '_blank').focus();
-                }
-              </script>
-              <button id="linkedinButton" class="w3-bar-item w3-button w3-padding-large">LinkedIn</button>
-                <script type="text/javascript">
-                  document.getElementById("linkedinButton").onclick = function () {
-                    window.open('https://www.linkedin.com/in/james-wolfe-6420151aa/', '_blank').focus();
-                    }
-                  </script>
 </div>
 
 <style>
@@ -168,11 +134,11 @@ scroll-snap-stop: always;
 .snap2 {
   position: relative;
 }
-.vertical div.snap h3 {position:absolute; bottom:250px; width:400px; padding:10px; left:calc(50% - 200px); color:#ffff; text-align:center; font:400 20px/25px arial, sans-serif; background:rgba(0, 0, 0, 0.5); border-radius:10px;}
-.vertical div.stick h1 {position:absolute; padding:0; margin:0; bottom:0; left:calc(50% - 160px); width:320px; background:#fff; text-align:center; font:600 45px/90px arial, sans-serif; border-radius:10px 10px 0 0; color:#000;}
-.vertical div.snap .info {width:95%; max-width:700px; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:50px; padding:30px;}
-.vertical div.snap .info h1 {padding:0; margin:0; font:600 120px/200px arial, sans-serif; color:#fff; text-align:center;}
-.vertical div.snap .info p {font:300 45px/70px arial, sans-serif; color:#fff;}
+.vertical div.snap h3 {position:absolute; bottom:240px; width:400px; padding:10px; left:calc(50% - 200px); color:#000; text-align:center; font:400 20px/25px arial, sans-serif; background:#fff; border-radius:10px;font-family: 'Courier New', monospace;}
+.vertical div.stick h1 {position:absolute; padding:0; margin:0; bottom:0; left:calc(50% - 160px); width:320px; background:#fff; text-align:center; font:600 45px/90px arial, sans-serif; border-radius:10px 10px 0 0; color:#000;font-family: Garamond, serif;}
+.vertical div.snap .info {width:95%; max-width:700px; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:50px; padding:30px;font-family: Garamond, serif;}
+.vertical div.snap .info h1 {padding:0; margin:0; font:600 100px/170px arial, sans-serif; color:#fff; text-align:center;font-family: Garamond, serif;}
+.vertical div.snap .info p {font:300 40px/60px arial, sans-serif; color:#fff;font-family: Garamond, serif;}
 </style>
 
 
@@ -206,32 +172,32 @@ function cb(response) {
             </h3>
           </div>
        			<div class="stick"><h1>WORKS</h1></div><div class="snap">
-              <h3><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/" target="_blank">AWS Cloud Website Portfolio</a>
+              <h3><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/" target="_blank"><b>AWS Cloud Website Portfolio</b></a>
               <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.
               <br>
               <br>
-              <a href="https://portfolioazure.z13.web.core.windows.net/" target="_blank">Azure Static Website Portfolio</a>
+              <a href="https://portfolioazure.z13.web.core.windows.net/" target="_blank"><b>Azure Static Website Portfolio</b></a>
               <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.
               </h3>
               </div>
               <div class="stick"><h1></h1></div><div class="snap">
-                <h3><a href="http://wolfejamesportfolio.surge.sh/" target="_blank">Surge Static Website portfolio</a>
+                <h3><a href="http://wolfejamesportfolio.surge.sh/" target="_blank"><b>Surge Static Website portfolio</b></a>
                   <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.
                   <br>
                   <br>
-                  <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank">Wix Static Website Portfolio</a>
+                  <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank"><b>Wix Static Website Portfolio</b></a>
                   <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.
                   </h3>
                   </div>
        			        <div class="stick"><h1>CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
-                      <h3>Pursing: Linux Administration Boot-camp
+                      <h3><b>Pursing: Linux Administration Boot-camp</b>
                         <br>January 2022 - Present <br>
-                      <br><br>AWS Cloud Practitioner
+                      <br><br><b>AWS Cloud Practitioner</b>
                       <br>September 2020 - September 2023
                       <br>Credential ID: 7BEZSG02PNEEQ83D
-                      <br><br>CTECS National Readiness Skills
+                      <br><br><b>CTECS National Readiness Skills</b>
                       <br>2015 - Present
-                      <br><br>UC Davis Veterinary Program at the University of California
+                      <br><br><b>UC Davis Veterinary Program at the University of California</b>
                       <br>2015-2017
                       </h3>
                       </div>
