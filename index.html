@@ -122,8 +122,8 @@ display:grid;
 grid-template-columns: 100% 100%;
 grid-template-rows: repeat(100vh);
 position:relative;
-overflow: scroll;
-overflow-y: hidden;
+overflow: hidden;
+overflow-y: scroll;
 scroll-snap-type: y mandatory;
 }
 .vertical div.stick {
@@ -141,11 +141,11 @@ scroll-snap-stop: always;
 .snap2 {
   position: relative;
 }
-.vertical div.snap h3 {position:absolute; bottom:210px; width:400px; padding:10px; left:calc(50% - 200px); color:#000; text-align:center; font:400 20px/25px arial, sans-serif; background:#fff; border-radius:10px;font-family: 'Courier New', monospace;}
-.vertical div.stick h1 {position:absolute; padding:0; margin:0; bottom:30px; left:calc(50% - 160px); width:320px; background:#fff; text-align:center; font:600 45px/90px arial, sans-serif; border-radius:10px 10px 0 0; color:#000;font-family: Garamond, serif;}
-.vertical div.snap .info {width:95%; max-width:700px; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); border-radius:50px; padding:30px;font-family: Garamond, serif;}
-.vertical div.snap .info h1 {padding:0px; margin:0px; font:600 100px/170px arial, sans-serif; color:#fff; text-align:center;font-family: Garamond, serif;}
-.vertical div.snap .info p {font:300 40px/60px arial, sans-serif; color:#fff;font-family: Garamond, serif;}
+.vertical div.snap h3 {position:sticky; height:auto;bottom:210px; width:400px; padding:10px; left:calc(50% - 200px); color:#fff; text-align:center; font:400 20px/25px arial, sans-serif; background:#000;font-family: 'Courier New', monospace;}
+.vertical div.stick h1 {position:absolute; padding:0; margin:0; bottom:30px; left:calc(50% - 160px); width:320px; background:#000; text-align:center; font:600 45px/90px Garamond, serif; color:#fff;}
+.vertical div.snap .info {width:100%; max-width:auto; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);font-family: Garamond, serif;background: rgba(0, 0, 0, 0.3)}
+.vertical div.snap .info h1 {padding:0px; margin:0px; font:600 100px/200px Garamond, serif; color:#fff; text-align:center;}
+.vertical div.snap .info p {font:300 40px/90px Garamond, serif; color:#fff;}
 </style>
 
 
@@ -161,63 +161,80 @@ function cb(response) {
   color:white;
   font-size: 40px;
 }
+.grid {
+  text-align:center;column-gap:1;row-gap:10;
+}
 </style>
 
 <center>
          <div class="vertical" style="overflow-y: scroll;">
-       			<div class="stick"><img src="images/original.jpg"></div>
+       			<div class="stick"><img src="images/1.jpg"></div>
             <div class="snap" ><div class="info"><h1>A-BLOG</h1>
             <p>By James Wolfe</p>
-            <div><img src="images/icon.jpg" style="float:left; display:inline-block; margin-left:235px;margin-bottom:20px;"></div>
-            <div id="visits" style="float:left;text-align:center; padding-top:10px;">...</div></p>
+            <div><img src="images/icon.jpg" style="float:center; display:inline-block;text-align: center;margin-bottom:20px;margin-left:0px"></div>
+            <div id="visits" style="float:center;text-align:center; padding-top:10px;">...</div></p>
 
             </div>
           </div>
 
 
-            <div class="stick"><h1>ABOUTME</h1></div><div class="snap"><h3>I'm a passioante computer science major with years of computer technology expierince with a enthusiastic look on learning every time I start something new. Fleshing out; developing, and publishing websites is fun for me and I can utilize neat services like the AWS Cloud and Github pages. My creative and problem-solving side is a great fit for technical professions. If you believe I could be a great fit for your team I would love to have a chat with you about potential opportunities, please email or message me on any social media platforms I provided.
+            <div class="stick" style="background:#000;position:relative;"><h1 style="bottom:40px;">ABOUTME</h1></div><div class="snap" style="padding-top:200px;"><h3 style="height:520px;">I'm a passioante computer science major with years of computer technology expierince with a enthusiastic look on learning every time I start something new. Fleshing out; developing, and publishing websites is fun for me and I can utilize neat services like the AWS Cloud and Github pages. My creative and problem-solving side is a great fit for technical professions. If you believe I could be a great fit for your team I would love to have a chat with you about potential opportunities, please email or message me on any social media platforms I provided.
             </h3>
           </div>
-       			<div class="stick"><h1>WORKS</h1></div><div class="snap">
-              <h3><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/" target="_blank"><b>AWS Cloud Website Portfolio</b></a>
-              <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.
-              <br>
-              <br>
-              <a href="https://portfolioazure.z13.web.core.windows.net/" target="_blank"><b>Azure Static Website Portfolio</b></a>
-              <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.
-              </h3>
-              </div>
-              <div class="stick"><h1></h1></div><div class="snap">
-                <h3><a href="http://wolfejamesportfolio.surge.sh/" target="_blank"><b>Surge Static Website portfolio</b></a>
-                  <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.
-                  <br>
-                  <br>
-                  <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank"><b>Wix Static Website Portfolio</b></a>
-                  <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.
-                  </h3>
-                  </div>
-       			        <div class="stick"><h1>CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
-                      <h3><b>Pursing: Linux Administration Boot-camp</b>
-                        <br>January 2022 - Present <br>
-                      <br><br><b>AWS Cloud Practitioner</b>
+
+          <div class="stick"><img src="images/2.jpg"><h1 style="bottom:90px;">WORKS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
+            <div class="grid"><h3 style="height:250px;">
+            <a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/" target="_blank">AWS Cloud Website Portfolio</a>
+          <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.</h3>
+        </div>
+
+            <div class="grid"><h3 style="height:250px;">
+              <a href="https://portfolioazure.z13.web.core.windows.net/" target="_blank">Azure Static Website Portfolio</a>
+            <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.</h3>
+          </div>
+
+          <div class="grid"><h3 style="height:250px;">
+            <a href="http://wolfejamesportfolio.surge.sh/" target="_blank">Surge Static Website Portfolio</a>
+          <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.</h3>
+        </div>
+
+        <div class="grid"><h3 style="height:250px;">
+          <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank">Wix Static Website Portfolio</a>
+        <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.</h3>
+      </div>
+
+      <div class="grid"><h3 style="height:250px;">
+      Aquarium Maintaince<br>Filtration; water quality, animal care, and overall health of the ecosystem that aqauriums bring is a hooby that requires dedication and problem solving skills.</h3>
+    </div>
+
+    <div class="grid"><h3 style="height:250px;">
+    TBD<br></h3>
+  </div>
+          </div>
+
+                  <div class="stick" style="background:#000;position:relative;"><h1 style="bottom:50px;">CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
+                      <h3 style="margin-top:60px;height:90px;"><b>Pursing: Linux Administration Boot-camp</b>
+                      <br>January 2022 - Present</h3>
+
+                      <h3 style="height:100px;"><b>AWS Cloud Practitioner</b>
                       <br>September 2020 - September 2023
-                      <br>Credential ID: 7BEZSG02PNEEQ83D
-                      <br><br><b>CTECS National Readiness Skills</b>
-                      <br>2015 - Present
-                      <br><br><b>UC Davis Veterinary Program at the University of California</b>
-                      <br>2015-2017
-                      </h3>
+                      <br>Credential ID: 7BEZSG02PNEEQ83D</h3>
+
+                      <h3 style="height:65px;"><b>CTECS National Readiness Skills</b>
+                      <br>2015 - Present</h3>
+
+                      <h3 style="margin-top:120px;height:90px;"><b>UC Davis Veterinary Program at the University of California</b>
+                      <br>2015-2017</h3>
                       </div>
-       			            <div class="stick"><h1>SKILLS</h1></div><div class="snap">
-                        <h3>Hardware and software troubleshooting
-                        <br><br>HTML, css, and javascript
-                        <br><br>Microsoft office Services
-                        <br><br>AWS Cloud services
-                        <br><br>Azure Cloud
-                        <br><br>Node.js
-                        <br><br>Jekyll
-                        <br><br>Git
-                        </h3>
+
+       			            <div class="stick"><img src="images/3.jpg"><h1>SKILLS</h1></div><div class="snap">
+                        <h3 style="margin-top:50px;height:70px;">Hardware and software troubleshooting</h3>
+                        <h3 style="height:40px;">HTML, css, and javascript</h3>
+                        <h3 style="height:40px;">Microsoft office Services</h3>
+                        <h3 style="height:40px;">AWS Cloud services</h3>
+                        <h3 style="height:40px;">Azure Cloud</h3>
+                        <h3 style="height:40px;">Node.js</h3>
+                        <h3 style="height:40px;">Git</h3>
                         </div>
        	                </div>
 </center>
