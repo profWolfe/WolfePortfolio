@@ -43,7 +43,6 @@ body {font-family: "Lato", sans-serif}
                             window.open('ResumeJWv2.pdf', '_blank').focus();
                             }
                             </script>
-                            <h3 style="padding-right:915px; float:right;">Kronic Data</h3>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">Contact Me<i class="fa fa-caret-dow"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -162,15 +161,69 @@ function cb(response) {
   font-size: 40px;
 }
 .grid {
-  text-align:center;column-gap:1;row-gap:10;
+  text-align:center;column-gap:1;row-gap:10;padding-top: 40px;
 }
+.grid2 {
+  text-align:center;column-gap:1;row-gap:10;padding-top: 40px;
+}
+.fade-in {
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
+}}
 </style>
 
 <center>
          <div class="vertical" style="overflow-y: scroll;">
        			<div class="stick"><img src="images/original.jpg" style="background-repeat: no-repeat;background-attachment: scroll;"></div>
-            <div class="snap" ><div class="info"><h1>A-BLOG</h1>
-            <p>By James Wolfe</p>
+            <div class="snap" ><div class="info"><h1>Kronic Data</h1>
+            <p>Blog | By James Wolfe</p>
             <div><img src="images/icon.jpg" style="float:center; display:inline-block;text-align: center;margin-bottom:20px;margin-left:0px"></div>
             <div id="visits" style="float:center;text-align:center; padding-top:10px;">...</div></p>
 
@@ -182,34 +235,30 @@ function cb(response) {
             </h3>
           </div>
 
-          <div class="stick"><h1 style="bottom:90px;">WORKS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
-            <div class="grid"><h3 style="height:250px;">
+          <div class="stick"><h1 style="bottom:70px;postion:relative;">WORKS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
+            <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
             <a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/" target="_blank">AWS Cloud Website Portfolio</a>
           <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.</h3>
         </div>
 
-            <div class="grid"><h3 style="height:250px;">
+            <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
               <a href="https://portfolioazure.z13.web.core.windows.net/" target="_blank">Azure Static Website Portfolio</a>
             <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.</h3>
           </div>
 
-          <div class="grid"><h3 style="height:250px;">
+          <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
             <a href="http://wolfejamesportfolio.surge.sh/" target="_blank">Surge Static Website Portfolio</a>
           <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.</h3>
         </div>
 
-        <div class="grid"><h3 style="height:250px;">
+        <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
           <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank">Wix Static Website Portfolio</a>
         <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.</h3>
       </div>
 
-      <div class="grid"><h3 style="height:250px;">
+      <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
       Aquarium Maintaince<br>Filtration; water quality, animal care, and overall health of the ecosystem that aqauriums bring is a hooby that requires dedication and problem solving skills.</h3>
     </div>
-
-    <div class="grid"><h3 style="height:250px;">
-    TBD<br></h3>
-  </div>
           </div>
 
                   <div class="stick" style="background:#000;position:relative;"><h1 style="bottom:50px;">CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
@@ -227,14 +276,16 @@ function cb(response) {
                       <br>2015-2017</h3>
                       </div>
 
-       			            <div class="stick"><h1>SKILLS</h1></div><div class="snap">
-                        <h3 style="margin-top:50px;height:70px;">Hardware and software troubleshooting</h3>
-                        <h3 style="height:40px;">HTML, css, and javascript</h3>
-                        <h3 style="height:40px;">Microsoft office Services</h3>
-                        <h3 style="height:40px;">AWS Cloud services</h3>
-                        <h3 style="height:40px;">Azure Cloud</h3>
-                        <h3 style="height:40px;">Node.js</h3>
-                        <h3 style="height:40px;">Git</h3>
+       			            <div class="stick"><h1 style="bottom:70px;">SKILLS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
+                        <div class="grid2"><h3 style="height:70px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Hardware and software troubleshooting</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Customer Service</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Microsoft office Services</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">AWS Cloud services</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Azure Cloud</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Web Development</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Git bash</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Redhat</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Linux</h3></div>
                         </div>
        	                </div>
 </center>
