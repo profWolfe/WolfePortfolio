@@ -25,29 +25,45 @@ body {font-family: "Lato", sans-serif}
           location.href = "index.html";
           }
           </script>
-            <button id="githubButton" class="w3-bar-item w3-button w3-padding-large">Github</button>
+            <button id="aboutButton" class="w3-bar-item w3-button w3-padding-large">ABOUT</button>
               <script type="text/javascript">
-                document.getElementById("githubButton").onclick = function () {
-                  window.open('https://github.com/profWolfe/jameswolfeblog', '_blank').focus();
+                document.getElementById("aboutButton").onclick = function () {
+                  location.href = "";
                   }
                 </script>
-                <button id="linkedinButton" class="w3-bar-item w3-button w3-padding-large">LinkedIn</button>
+                <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">WORKS</button>
                   <script type="text/javascript">
                     document.getElementById("linkedinButton").onclick = function () {
-                      window.open('https://www.linkedin.com/in/james-wolfe-6420151aa/', '_blank').focus();
+                      location.href = "";
                       }
                       </script>
-                      <button id="cvButton" class="w3-bar-item w3-button w3-padding-large">CV</button>
-                        <script type="text/javascript">
-                          document.getElementById("cvButton").onclick = function () {
-                            window.open('ResumeJWv2.pdf', '_blank').focus();
-                            }
-                            </script>
+                    <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">Contact</button>
+                      <script type="text/javascript">
+                        document.getElementById("contactButton").onclick = function () {
+                          location.href = "";
+                          }
+                          </script>
     <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">Contact Me<i class="fa fa-caret-dow"></i></button>
+      <button class="w3-padding-large w3-button" title="More">More<i class="fa fa-caret-dow"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <h4 style="padding-left:20px; padding-right:10px;">Wolfe.James.J96@gmail.com</h4>
-        <h4 style="padding-left:20px;">(703)789-0919</h4>
+        <button id="certsButton" class="w3-bar-item w3-button w3-padding-large">CERTS</button>
+          <script type="text/javascript">
+            document.getElementById("certsButton").onclick = function () {
+              location.href = "";
+              }
+              </script>
+        <button id="skillsButton" class="w3-bar-item w3-button w3-padding-large">SKILLS</button>
+          <script type="text/javascript">
+            document.getElementById("skillsButton").onclick = function () {
+              location.href = "";
+              }
+              </script>
+        <button id="cvButton" class="w3-bar-item w3-button w3-padding-large">CV</button>
+          <script type="text/javascript">
+            document.getElementById("cvButton").onclick = function () {
+              window.open('ResumeJWv2.pdf', '_blank').focus();
+              }
+              </script>
     </div>
   </div>
 </div>
@@ -140,7 +156,7 @@ scroll-snap-stop: always;
 .snap2 {
   position: relative;
 }
-.vertical div.snap h3 {position:sticky; height:auto;bottom:210px; width:400px; padding:10px; left:calc(50% - 200px); color:#fff; text-align:center; font:400 20px/25px arial, sans-serif; background:#000;font-family: 'Courier New', monospace;}
+.vertical div.snap h3 {position:sticky; bottom:210px; width:400px; padding:10px; left:calc(50% - 200px); color:#fff; text-align:center; font:400 20px/25px arial, sans-serif; background:#000;font-family: 'Courier New', monospace;}
 .vertical div.stick h1 {position:absolute; padding:0; margin:0; bottom:30px; left:calc(50% - 160px); width:320px; background:#000; text-align:center; font:600 45px/90px Garamond, serif; color:#fff;}
 .vertical div.snap .info {width:100%; max-width:auto; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);font-family: Garamond, serif;background: rgba(0, 0, 0, 0.3)}
 .vertical div.snap .info h1 {padding:0px; margin:0px; font:600 100px/200px Garamond, serif; color:#fff; text-align:center;}
@@ -230,35 +246,40 @@ function cb(response) {
             </div>
           </div>
 
-
-            <div class="stick" style="background:#000;position:relative;"><h1 style="bottom:40px;">ABOUTME</h1></div><div class="snap" style="padding-top:200px;"><h3 style="height:520px;">I'm a passioante computer science major with years of computer technology expierince with a enthusiastic look on learning every time I start something new. Fleshing out; developing, and publishing websites is fun for me and I can utilize neat services like the AWS Cloud and Github pages. My creative and problem-solving side is a great fit for technical professions. If you believe I could be a great fit for your team I would love to have a chat with you about potential opportunities, please email or message me on any social media platforms I provided.
+<!--
+Works page
+-->
+            <div class="stick aboutme" style="background:#000;position:relative;"><h1 style="bottom:40px;">ABOUT</h1></div><div class="snap" style="padding-top:180px;"><h3 style="height:520px;">I'm a passioante computer science major with years of computer technology expierince with a enthusiastic look on learning every time I start something new. Fleshing out; developing, and publishing websites is fun for me and I can utilize neat services like the AWS Cloud and Github pages. My creative and problem-solving side is a great fit for technical professions. If you believe I could be a great fit for your team I would love to have a chat with you about potential opportunities, please email or message me on any social media platforms I provided.
             </h3>
           </div>
 
-          <div class="stick"><h1 style="bottom:70px;postion:relative;">WORKS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
-            <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
+          <div class="stick"><h1 style="bottom:70px;">WORKS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
+            <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
             <a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/" target="_blank">AWS Cloud Website Portfolio</a>
           <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.</h3>
         </div>
 
-            <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
+            <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
               <a href="https://portfolioazure.z13.web.core.windows.net/" target="_blank">Azure Static Website Portfolio</a>
             <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.</h3>
           </div>
 
-          <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
+          <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
             <a href="http://wolfejamesportfolio.surge.sh/" target="_blank">Surge Static Website Portfolio</a>
           <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.</h3>
         </div>
 
-        <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
+        <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
           <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank">Wix Static Website Portfolio</a>
         <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.</h3>
       </div>
 
-      <div class="grid"><h3 style="height:250px;color:#000; background-color: rgba(365, 365, 365, 0.8);">
+      <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
       Aquarium Maintaince<br>Filtration; water quality, animal care, and overall health of the ecosystem that aqauriums bring is a hooby that requires dedication and problem solving skills.</h3>
     </div>
+    <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
+    Linux Administration Bootcamp<br>Pursing a linux based certification, learning the fundamentals and key skills to use linux based servers and software.</h3>
+  </div>
           </div>
 
                   <div class="stick" style="background:#000;position:relative;"><h1 style="bottom:50px;">CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
@@ -277,56 +298,30 @@ function cb(response) {
                       </div>
 
        			            <div class="stick"><h1 style="bottom:70px;">SKILLS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Hardware and software troubleshooting</h3></div>
-                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Customer Service</h3></div>
-                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Microsoft office Services</h3></div>
-                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">AWS Cloud services</h3></div>
-                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Azure Cloud</h3></div>
-                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Web Development</h3></div>
-                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Git bash</h3></div>
-                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Redhat</h3></div>
-                        <div class="grid2"><h3 style="height:40px;color:#000; background-color: rgba(365, 365, 365, 0.8);">Linux</h3></div>
+                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Hardware and software troubleshooting</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Customer Service</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Microsoft office Services</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">AWS Cloud services</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Azure Cloud</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Web Development</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Git bash</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Redhat</h3></div>
+                        <div class="grid2"><h3 style="height:40px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Linux</h3></div>
                         </div>
-       	                </div>
+
+                        <div class="stick" style="background:#000;"><h1 style="bottom:50px;">CONTACT ME</h1></div><div class="snap">
+                            <div><h3 style="padding-top:280px;">(703)789-0919</h3>
+                            <h3>Wolfe.James.J96@gmail.com</h3>
+                            <h3><a href="https://www.linkedin.com/in/james-wolfe-6420151aa/" target="_blank">https://www.linkedin.com/in/james-wolfe-6420151aa/</a></h3>
+                            <h3><a href="https://github.com/profWolfe/jameswolfeblog" target="_blank">https://github.com/profWolfe/jameswolfeblog</a></h3>
+                            <h3></h3>
+
+
+                          </div>
+                            </div>
+                          </div>
 </center>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-  <!-- Automatic Slideshow Images -->
-  <div class="w3-display-container w3-center">
-    <img src="images/image.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-
-    </div>
-  </div>
-
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">About Me</h2>
-    <p class="w3-opacity"><i></i></p>
-    <p class="w3-justify">Hello welcome to my blog, I'm a passionate computer science graduate, I enjoy all things tech. Developing new skills and
-        becoming the best I can be is what I strive for everyday. A few of my hobbies are aquariums and playing the guitar, I have a 40 gallon
-      breeder tank with 7 madagascar rainbow fish with flourished fully planted tank.</p>
-  </div>
-
-  <!-- The Contact Section -->
-  <center><div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Reach out anytime!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="m6 w3-large w3-margin-bottom">
-        <i class="" style="width:30px"></i>Virginia, US<br>
-        <i class="" style="width:30px"></i>Wolfe.James.J96@gmail.com<br>
-        <i class="" style="width:30px"></i>https://github.com/profWolfe<br>
-        <i class="" style="width:30px"></i>https://www.linkedin.com/in/james-wolfe-6420151aa/<br>
-      </div>
-    </center>
-    </div>
-  </div>
-
-<!-- End Page Content -->
-</div>
 <script>
 // Automatic Slideshow - change image every 4 seconds
 var myIndex = 0;
