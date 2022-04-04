@@ -176,8 +176,119 @@ body {font-family: "Lato", sans-serif}
       opacity:1;
   }
   }}
+  * {box-sizing: border-box}
+  body {font-family: Verdana, sans-serif; margin:0}
+  .mySlides {display: none}
+  img {vertical-align: middle;}
 
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 500px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    margin-left: 515px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Caption text */
+  .text {
+    color: #000;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
   </style>
+
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -257,35 +368,57 @@ Works page
               team environment.
             </h3>
           </div>
-
-          <div class="stick" ><h1 style="bottom:70px;">WORKS</h1></div><div class="snap" id="works"style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
-            <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
-            <a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">AWS Cloud Website Portfolio</a>
-          <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.</h3>
-        </div>
-
-            <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
-              <a href="https://portfolioazure.z13.web.core.windows.net/index.html" target="_blank">Azure Static Website Portfolio</a>
-            <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.</h3>
-          </div>
-
-          <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
-            <a href="http://wolfejamesportfolio.surge.sh/" target="_blank">Surge Static Website Portfolio</a>
-          <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.</h3>
-        </div>
-
-        <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
-          <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank">Wix Static Website Portfolio</a>
-        <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.</h3>
-      </div>
-
-      <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
-      AWS Cloud S3 Central Storing<br>Storing all website and technical projects in a single location using S3 bucket service.</h3>
-    </div>
-    <div class="grid"><h3 style="height:250px;color:#000; background-color: #fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">
-    </h3>
+<div class="stick" ><h1 style="bottom:50px;">PROJECTS</h1></div><div class="snap">
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="images/white.jpg" style="width:100%">
+  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">AWS Cloud Static Website Portfolio</a>
+  <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.
   </div>
-          </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="images/white.jpg" style="width:100%">
+  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Azure Static Website Portfolio</a>
+  <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="images/white.jpg" style="width:100%">
+  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Surge Static Website Portfolio</a>
+  <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="images/white.jpg" style="width:100%">
+  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Wix Static Website Portfolio</a>
+  <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.
+  </div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="images/white.jpg" style="width:100%">
+  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">AWS Cloud S3 Storage</a>
+  <br>Storing all website and technical projects in a single location using S3 bucket service.
+  </div>
+</div>
+
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
 
                   <div class="stick" id="certs" style="background:#000;position:relative;"><h1 style="bottom:50px;">CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
                     <h3 style="margin-top:60px;height:90px;"><b>Linux Administration Boot-camp</b>
