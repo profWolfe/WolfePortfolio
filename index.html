@@ -8,9 +8,11 @@
 <link rel="stylesheet" href="css/w3style.css">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/min.css">
+
+
+
 <style>
 body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
 </style>
 
 </head>
@@ -107,12 +109,18 @@ body {font-family: "Lato", sans-serif}
   </style>
 
 
+
+
   <script>
   function cb(response) {
       document.getElementById('visits').innerText = response.value;
   }
   </script>
+
+
   <script async src="https://api.countapi.xyz/hit/jameswolfeblog.com/visits?callback=cb"></script>
+
+
 
   <style>
   #visits {
@@ -124,56 +132,6 @@ body {font-family: "Lato", sans-serif}
   }
   .grid2 {
     text-align:center;column-gap:1;row-gap:10;padding-top: 40px;
-  }
-  .fade-in {
-    animation: fadeIn ease 10s;
-    -webkit-animation: fadeIn ease 10s;
-    -moz-animation: fadeIn ease 10s;
-    -o-animation: fadeIn ease 10s;
-    -ms-animation: fadeIn ease 10s;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-
-  @-o-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
-
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
   }
   }}
   * {box-sizing: border-box}
@@ -255,41 +213,7 @@ body {font-family: "Lato", sans-serif}
     background-color: #717171;
   }
 
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  }
   </style>
-
-  <script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
-  </script>
-
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
@@ -373,31 +297,36 @@ Works page
 <div class="mySlides fade">
   <div class="numbertext">1 / 5</div>
   <img src="images/white.jpg" style="width:100%">
-  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">AWS Cloud Static Website Portfolio</a>
+  <div class="text">AWS Cloud Static Website Portfolio
   <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.
+  <br><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank"><img src="images/aws.jpg" style="width:400px;"></a>
   </div>
 </div>
 <div class="mySlides fade">
   <div class="numbertext">2 / 5</div>
   <img src="images/white.jpg" style="width:100%">
-  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Azure Static Website Portfolio</a>
+  <div class="text">Azure Static Website Portfolio
   <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.
+  <br><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank"><img src="images/azure.jpg" style="width:400px;"></a>
   </div>
 </div>
 <div class="mySlides fade">
   <div class="numbertext">3 / 5</div>
   <img src="images/white.jpg" style="width:100%">
-  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Surge Static Website Portfolio</a>
+  <div class="text">Surge Static Website Portfolio
   <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.
+  <br><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank"><img src="images/surge.jpg" style="width:400px;"></a>
   </div>
 </div>
 <div class="mySlides fade">
   <div class="numbertext">4 / 5</div>
   <img src="images/white.jpg" style="width:100%">
-  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">Wix Static Website Portfolio</a>
+  <div class="text">Wix Static Website Portfolio
   <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.
+  <br><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank"><img src="images/wix.jpg" style="width:400px;"></a>
   </div>
 </div>
+<!--
 <div class="mySlides fade">
   <div class="numbertext">5 / 5</div>
   <img src="images/white.jpg" style="width:100%">
@@ -405,7 +334,7 @@ Works page
   <br>Storing all website and technical projects in a single location using S3 bucket service.
   </div>
 </div>
-
+-->
 </div>
 <a class="prev" onclick="plusSlides(-1)">❮</a>
 <a class="next" onclick="plusSlides(1)">❯</a>
@@ -415,9 +344,6 @@ Works page
 <br>
 
 <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
                   <div class="stick" id="certs" style="background:#000;position:relative;"><h1 style="bottom:50px;">CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
