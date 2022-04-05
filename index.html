@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Blog | James Wolfe</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/w3style.css">
-<link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/min.css">
+  <title>Blog | James Wolfe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/w3style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/min.css">
 
 
 
-<style>
-body {font-family: "Lato", sans-serif}
+  <style>
+  body {font-family: "Lato", sans-serif}
 </style>
 
 </head>
@@ -63,40 +63,40 @@ body {font-family: "Lato", sans-serif}
     width: 65px;
   }
   @media only screen and (max-width: 600px) {
-  header p {display:none;}
+    header p {display:none;}
   }
 
   @supports (-webkit-touch-callout: none) {
-  :root { --vht: calc(100vh - 80px);}
+    :root { --vht: calc(100vh - 80px);}
   }
 
   @supports not (-webkit-touch-callout: none) {
-  :root { --vht: 100vh;}
+    :root { --vht: 100vh;}
   }
   html, body {width:100%; height:var(--vht); padding:0; margin:0; overflow:hidden; background:transparent;}
 
   .vertical {
-  width:100%;
-  height:var(--vht);
-  display:grid;
-  grid-template-columns: 100% 100%;
-  grid-template-rows: repeat(100vh);
-  position:relative;
-  overflow: hidden;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+    width:100%;
+    height:var(--vht);
+    display:grid;
+    grid-template-columns: 100% 100%;
+    grid-template-rows: repeat(100vh);
+    position:relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
   }
   .vertical div.stick {
-  display:block;
-  width:100%; height:var(--vht);
-  position:sticky; top:0;
+    display:block;
+    width:100%; height:var(--vht);
+    position:sticky; top:0;
   }
   .vertical div:first-child {z-index:0;}
   .vertical div.stick img {width:100%; height:var(--vht); object-fit:cover;}
 
   .vertical div.snap {width:100%; display: grid; position:relative; left:-100%; overflow:hidden; content-visibility:auto;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
   .snap2 {
     position: relative;
@@ -113,7 +113,7 @@ body {font-family: "Lato", sans-serif}
 
   <script>
   function cb(response) {
-      document.getElementById('visits').innerText = response.value;
+    document.getElementById('visits').innerText = response.value;
   }
   </script>
 
@@ -244,211 +244,214 @@ body {font-family: "Lato", sans-serif}
   }
   </script>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <button id="homeButton" class="w3-bar-item w3-button w3-padding-large">HOME</button>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <button id="homeButton" class="w3-bar-item w3-button w3-padding-large">HOME</button>
       <script type="text/javascript">
-        document.getElementById("homeButton").onclick = function () {
-          location.href = "#home";
+      document.getElementById("homeButton").onclick = function () {
+        location.href = "#home";
+      }
+      </script>
+      <button id="aboutButton" class="w3-bar-item w3-button w3-padding-large">ABOUT</button>
+      <script type="text/javascript">
+      document.getElementById("aboutButton").onclick = function () {
+        location.href = "#aboutme";
+      }
+      </script>
+      <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">PROJECTS</button>
+      <script type="text/javascript">
+      document.getElementById("worksButton").onclick = function () {
+        location.href = "#works";
+      }
+      </script>
+      <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">Contact</button>
+      <script type="text/javascript">
+      document.getElementById("contactButton").onclick = function () {
+        location.href = "#contact";
+      }
+      </script>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">More<i class="fa fa-caret-dow"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <button id="certsButton" class="w3-bar-item w3-button w3-padding-large">CERTS</button>
+          <script type="text/javascript">
+          document.getElementById("certsButton").onclick = function () {
+            location.href = "#certs";
           }
           </script>
-            <button id="aboutButton" class="w3-bar-item w3-button w3-padding-large">ABOUT</button>
-              <script type="text/javascript">
-                document.getElementById("aboutButton").onclick = function () {
-                  location.href = "#aboutme";
-                  }
-                </script>
-                <button id="worksButton" class="w3-bar-item w3-button w3-padding-large">PROJECTS</button>
-                  <script type="text/javascript">
-                    document.getElementById("worksButton").onclick = function () {
-                      location.href = "#works";
-                      }
-                      </script>
-                    <button id="contactButton" class="w3-bar-item w3-button w3-padding-large">Contact</button>
-                      <script type="text/javascript">
-                        document.getElementById("contactButton").onclick = function () {
-                          location.href = "#contact";
-                          }
-                          </script>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">More<i class="fa fa-caret-dow"></i></button>
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <button id="certsButton" class="w3-bar-item w3-button w3-padding-large">CERTS</button>
+          <button id="skillsButton" class="w3-bar-item w3-button w3-padding-large">SKILLS</button>
           <script type="text/javascript">
-            document.getElementById("certsButton").onclick = function () {
-              location.href = "#certs";
-              }
-              </script>
-        <button id="skillsButton" class="w3-bar-item w3-button w3-padding-large">SKILLS</button>
+          document.getElementById("skillsButton").onclick = function () {
+            location.href = "#skills";
+          }
+          </script>
+          <button id="cvButton" class="w3-bar-item w3-button w3-padding-large">CV</button>
           <script type="text/javascript">
-            document.getElementById("skillsButton").onclick = function () {
-              location.href = "#skills";
-              }
-              </script>
-        <button id="cvButton" class="w3-bar-item w3-button w3-padding-large">CV</button>
-          <script type="text/javascript">
-            document.getElementById("cvButton").onclick = function () {
-              window.open('ResumeJWv2.pdf', '_blank').focus();
-              }
-              </script>
+          document.getElementById("cvButton").onclick = function () {
+            window.open('ResumeJWv2.pdf', '_blank').focus();
+          }
+          </script>
+        </div>
+      </div>
+      <div id="sfcr1dejwxnblszgmly1n2aew1n7163c8sq"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=r1dejwxnblszgmly1n2aew1n7163c8sq&down=async" async></script><noscript><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=r1dejwxnblszgmly1n2aew1n7163c8sq" border="0" title="free web counter" alt="free web counter"></a></noscript>
     </div>
-  </div>
-  <div id="sfcr1dejwxnblszgmly1n2aew1n7163c8sq"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=r1dejwxnblszgmly1n2aew1n7163c8sq&down=async" async></script><noscript><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=r1dejwxnblszgmly1n2aew1n7163c8sq" border="0" title="free web counter" alt="free web counter"></a></noscript>
-</div>
-<center>
-         <div class="vertical" style="overflow-y: scroll;">
-       			<div class="stick"><img src="images/original.jpg" style="background-repeat: no-repeat;background-attachment: scroll;"></div>
-            <div class="snap" id="home"><div class="info"><h1 id="firstpage">Kronic Data</h1>
-            <p>Portfolio | Blog | By James Wolfe</p>
-            <!-- previous web counter
-            <div><img src="images/icon.jpg" style="float:center; display:inline-block;text-align: center;margin-bottom:20px;margin-left:0px"></div>
-            <div id="visits" style="float:center;text-align:center; padding-top:10px;">...</div></p>
-          -->
+    <center>
+      <div class="vertical" style="overflow-y: scroll;">
+        <div class="stick"><img src="images/original.jpg" style="background-repeat: no-repeat;background-attachment: scroll;"></div>
+        <div class="snap" id="home"><div class="info"><h1 id="firstpage">Kronic Data</h1>
+          <p>Portfolio | Blog | By James Wolfe</p>
+          <!-- previous web counter
+          <div><img src="images/icon.jpg" style="float:center; display:inline-block;text-align: center;margin-bottom:20px;margin-left:0px"></div>
+          <div id="visits" style="float:center;text-align:center; padding-top:10px;">...</div></p>
+        -->
 
+      </div>
+    </div>
+
+    <!--
+    Works page
+  -->
+  <div class="stick" id="aboutme"
+  style="background:#000;position:relative;"><h1
+  style="bottom:40px;">ABOUT</h1></div><div class="snap"
+  style="padding-top:180px;"><h3 style="height:520px;"> Passionate
+    computer science major with years of computer technology experience
+    and enthusiastic about learning. Fleshing out; developing, and
+    publishing websites has allowed me to develop key skills required in
+    a professional setting. Strong organizational skills,
+    time-management, and detail-oriented skills developed from pursuing
+    and completing many technical and non-technical works in both the
+    professional and non-professional environments. While working in
+    customer serivce oriented industry I've obtained team-work oriented
+    skills that are key to growing and developing in any team
+    environment. </h3> </div> <div class="stick" ><h1 style="bottom:40px;">PROJECTS</h1></div><div class="snap" id="works"> <div
+        class="slideshow-container"> <div class="mySlides fade"> <div
+          class="numbertext">1 / 4</div> <img src="images/white.jpg"
+          style="width:100%"> <div class="text">AWS Cloud Static Website
+            Portfolio <br>Utilized AWS Cloud services to host,store, and launch
+            a static website with HTML, css, and javascript code. The S3 bucket
+            was used to store the data and launch a free static website. <br><a
+            href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html"
+            target="_blank"><img src="images/aws.jpg" style="width:400px;"></a>
+          </div> </div> <div class="mySlides fade"> <div class="numbertext">2
+            / 4</div> <img src="images/white.jpg" style="width:100%"> <div
+            class="text">Azure Static Website Portfolio <br>Azure services
+            storage container were used to store the data and subscription
+            service was used to host the free static website. <br><a
+            href="https://portfolioazure.z13.web.core.windows.net/index.html"
+            target="_blank"><img src="images/azure.jpg"
+            style="width:400px;"></a> </div> </div> <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div> <img src="images/white.jpg"
+              style="width:100%"> <div class="text">Surge Static Website Portfolio
+                <br>Using a publishing service called surge I was able to stand up a
+                static website in seconds by using the CMD to go to the correct path
+                and simply publishing the website. <br><a
+                href="http://wolfejamesportfolio.surge.sh/" target="_blank"><img
+                src="images/surge.jpg" style="width:400px;"></a> </div> </div> <div
+                class="mySlides fade"> <div class="numbertext">4 / 4</div> <img
+                src="images/white.jpg" style="width:100%"> <div class="text">Wix
+                  Static Website Portfolio <br>Using Wix the simple add features
+                  bypass any need for coding HTML,css, or javascript. There inbuilt
+                  services allow for easy creations, maintaince, and hosting
+                  capabilities while also being free. <br><a
+                  href="https://wolfejamesj96.wixsite.com/my-site"
+                  target="_blank"><img src="images/wix.jpg" style="width:400px;"></a>
+                </div> </div>
+                <!--
+                <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="images/white.jpg" style="width:100%">
+                <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">AWS Cloud S3 Storage</a>
+                <br>Storing all website and technical projects in a single location using S3 bucket service.
+              </div>
+            </div>
+          -->
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+      </div>
+
+      <div class="stick" id="certs" style="background:#000;position:relative;"><h1 style="bottom:50px;">CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
+        <h3 style="margin-top:60px;height:90px;"><b>Linux Administration Boot-camp</b>
+          <br>March 29, 2022
+          <br>ude.my/UC-fcd5c324-ad8c-4b70-a83d-b9712cb3b0f8</h3>
+
+          <h3 style="height:100px;"><b>AWS Cloud Practitioner</b>
+            <br>September 2020 - September 2023
+            <br>Credential ID: 7BEZSG02PNEEQ83D</h3>
+
+            <h3 style="height:65px;"><b>CTECS National Readiness Skills</b>
+              <br>2015 - Present</h3>
+            </div>
+
+            <div class="stick" id="skills"><h1 style="bottom:70px">SKILLS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Hardware troubleshooting</h3></div>
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Agile</h3></div>
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Microsoft office services</h3></div>
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">AWS Cloud</h3></div>
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Azure</h3></div>
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Web development</h3></div>
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Git, Github</h3></div>
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Redhat</h3></div>
+              <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Information technology</h3></div>
+            </div>
+
+            <div class="stick" id="contact"style="background:#000;"><h1 style="bottom:50px;">CONTACT ME</h1></div><div class="snap">
+              <div><h3 style="padding-top:280px;">(703)789-0919</h3>
+                <h3>Wolfe.James.J96@gmail.com</h3>
+                <h3><a href="https://www.linkedin.com/in/james-wolfe-6420151aa/" target="_blank">https://www.linkedin.com/in/james-wolfe-6420151aa/</a></h3>
+                <h3><a href="https://github.com/profWolfe/jameswolfeblog" target="_blank">https://github.com/profWolfe/jameswolfeblog</a></h3>
+                <h3></h3>
+
+
+              </div>
             </div>
           </div>
+        </center>
 
-<!--
-Works page
--->
-            <div class="stick" id="aboutme" style="background:#000;position:relative;"><h1 style="bottom:40px;">ABOUT</h1></div><div class="snap" style="padding-top:180px;"><h3 style="height:520px;">
-              Passionate computer science major with years of computer technology experience and enthusiastic about
-              learning. Fleshing out; developing, and publishing websites has allowed me to develop key skills required in a
-              professional setting. Strong organizational skills, time-management, and detail-oriented skills developed from pursuing
-              and completing many technical and non-technical works in both the professional and non-professional environments. While working in
-              customer serivce oriented industry I've obtained team-work oriented skills that are key to growing and developing in any
-              team environment.
-            </h3>
-          </div>
-<div class="stick" ><h1 id="works" style="bottom:40px;">PROJECTS</h1></div><div class="snap">
-<div class="slideshow-container">
-<div class="mySlides fade">
-  <div class="numbertext">1 / 4</div>
-  <img src="images/white.jpg" style="width:100%">
-  <div class="text">AWS Cloud Static Website Portfolio
-  <br>Utilized AWS Cloud services to host,store, and launch a static website with HTML, css, and javascript code. The S3 bucket was used to store the data and launch a free static website.
-  <br><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank"><img src="images/aws.jpg" style="width:400px;"></a>
-  </div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">2 / 4</div>
-  <img src="images/white.jpg" style="width:100%">
-  <div class="text">Azure Static Website Portfolio
-  <br>Azure services storage container were used to store the data and subscription service was used to host the free static website.
-  <br><a href="https://portfolioazure.z13.web.core.windows.net/index.html" target="_blank"><img src="images/azure.jpg" style="width:400px;"></a>
-  </div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">3 / 4</div>
-  <img src="images/white.jpg" style="width:100%">
-  <div class="text">Surge Static Website Portfolio
-  <br>Using a publishing service called surge I was able to stand up a static website in seconds by using the CMD to go to the correct path and simply publishing the website.
-  <br><a href="http://wolfejamesportfolio.surge.sh/" target="_blank"><img src="images/surge.jpg" style="width:400px;"></a>
-  </div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">4 / 4</div>
-  <img src="images/white.jpg" style="width:100%">
-  <div class="text">Wix Static Website Portfolio
-  <br>Using Wix the simple add features bypass any need for coding HTML,css, or javascript. There inbuilt services allow for easy creations, maintaince, and hosting capabilities while also being free.
-  <br><a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank"><img src="images/wix.jpg" style="width:400px;"></a>
-  </div>
-</div>
-<!--
-<div class="mySlides fade">
-  <div class="numbertext">5 / 5</div>
-  <img src="images/white.jpg" style="width:100%">
-  <div class="text"><a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank">AWS Cloud S3 Storage</a>
-  <br>Storing all website and technical projects in a single location using S3 bucket service.
-  </div>
-</div>
--->
-</div>
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
+        <script>
+        // Automatic Slideshow - change image every 4 seconds
+        var myIndex = 0;
+        carousel();
 
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 8000);
+        }
 
-</div>
-<br>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
 
-<div style="text-align:center">
-</div>
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
 
-                  <div class="stick" id="certs" style="background:#000;position:relative;"><h1 style="bottom:50px;">CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
-                    <h3 style="margin-top:60px;height:90px;"><b>Linux Administration Boot-camp</b>
-                    <br>March 29, 2022
-                    <br>ude.my/UC-fcd5c324-ad8c-4b70-a83d-b9712cb3b0f8</h3>
-
-                      <h3 style="height:100px;"><b>AWS Cloud Practitioner</b>
-                      <br>September 2020 - September 2023
-                      <br>Credential ID: 7BEZSG02PNEEQ83D</h3>
-
-                      <h3 style="height:65px;"><b>CTECS National Readiness Skills</b>
-                      <br>2015 - Present</h3>
-                      </div>
-
-       			            <div class="stick" id="skills"><h1 style="bottom:70px">SKILLS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Hardware troubleshooting</h3></div>
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Agile</h3></div>
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Microsoft office services</h3></div>
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">AWS Cloud</h3></div>
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Azure</h3></div>
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Web development</h3></div>
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Git, Github</h3></div>
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Redhat</h3></div>
-                        <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);">Information technology</h3></div>
-                        </div>
-
-                        <div class="stick" id="contact"style="background:#000;"><h1 style="bottom:50px;">CONTACT ME</h1></div><div class="snap">
-                            <div><h3 style="padding-top:280px;">(703)789-0919</h3>
-                            <h3>Wolfe.James.J96@gmail.com</h3>
-                            <h3><a href="https://www.linkedin.com/in/james-wolfe-6420151aa/" target="_blank">https://www.linkedin.com/in/james-wolfe-6420151aa/</a></h3>
-                            <h3><a href="https://github.com/profWolfe/jameswolfeblog" target="_blank">https://github.com/profWolfe/jameswolfeblog</a></h3>
-                            <h3></h3>
-
-
-                          </div>
-                            </div>
-                          </div>
-</center>
-
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 8000);
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-</body>
-</html>
+    </body>
+    </html>
