@@ -15,7 +15,44 @@
 
 </head>
 <body>
+<style>
+.fade-in-text {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 150px;
+  color: black;
+  animation: fadeIn linear 7s;
+  -webkit-animation: fadeIn linear 7s;
+  -moz-animation: fadeIn linear 7s;
+  -o-animation: fadeIn linear 7s;
+  -ms-animation: fadeIn linear 7s;
+}
 
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+</style>
   <style>
   header {
     overflow: hidden;
@@ -99,7 +136,7 @@
   .snap2 {
     position: relative;
   }
-  .vertical div.snap h3 {position:sticky; bottom:210px; width:400px; padding:10px; left:calc(50% - 200px); color:#fff; text-align:center; font:400 20px/25px arial, sans-serif; background:#000;font-family: 'Courier New', monospace;}
+  .vertical div.snap h3 {position:sticky; bottom:210px; width:400px; padding:10px; left:calc(50% - 200px); color:#fff; text-align:center; font:400 20px/25px arial, sans-serif;font-family: 'Courier New', monospace;}
   .vertical div.stick h1 {position:absolute; padding:0; margin:0; bottom:30px; left:calc(50% - 160px); width:320px; background:#000; text-align:center; font:600 45px/90px Garamond, serif; color:#fff;}
   .vertical div.snap .info {width:100%; max-width:700px; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);font-family: Garamond, serif;text-shadow: 2px 2px #000;}
   .vertical div.snap .info h1 {padding:0px; margin:0px; font:600 100px/200px Garamond, serif; color:#fff; text-align:center;}
@@ -296,7 +333,6 @@
       <div id="sfcr1dejwxnblszgmly1n2aew1n7163c8sq"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=r1dejwxnblszgmly1n2aew1n7163c8sq&down=async" async></script><noscript><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=r1dejwxnblszgmly1n2aew1n7163c8sq" border="0" title="free web counter" alt="free web counter"></a></noscript>
     </div>
 
-
     <style>
     .js-scroll {
   opacity: 0;
@@ -311,9 +347,8 @@
     <center>
       <div class="vertical" style="overflow-y: scroll;">
         <div class="stick"><img src="images/original.jpg" style="background-repeat: no-repeat;background-attachment: scroll;"></div>
-        <div class="snap" id="home"><div class="info"><h1 id="firstpage">Kronic Data</h1>
+        <div class="snap" id="home"><div class="info fade-in"><h1 id="firstpage">Kronic Data</h1>
           <p>Portfolio | Blog | By James Wolfe</p>
-          <h1>⇩</h1>
           <!-- previous web counter
           <div><img src="images/icon.jpg" style="float:center; display:inline-block;text-align: center;margin-bottom:20px;margin-left:0px"></div>
           <div id="visits" style="float:center;text-align:center; padding-top:10px;">...</div></p>
@@ -326,7 +361,8 @@
   -->
   <div class="stick" id="aboutme"
   style="background:#000;position:relative;"><h1
-  style="bottom:40px;">ABOUT</h1></div><div class="snap"
+  style="bottom:40px;">ABOUT</h1></div>
+<div class="snap"
   style="padding-top:180px;"><h3 style="height:520px;">
     Passionate computer science major with years of computer technology experience
     and enthusiastic about learning. Fleshing out; developing, and
@@ -392,7 +428,11 @@
       </div>
 
       <div class="stick" id="certs" style="background:#000;position:relative;"><h1 style="bottom:50px;">CERTS</h1></div><div class="snap" style="margin-bottom:10px;">
-        <h3 style="margin-top:60px;height:90px;"><b>Linux Administration Boot-camp</b>
+        <h3 style="margin-top:60px;height:90px;"><b>Agile Scrum Fundamentals</b>
+          <br>April 30, 2022
+          <br>ude.my/UC-800faeff-a669-4e5b-b802-3cbb834cdd2f</h3>
+
+        <h3 style="height:90px;"><b>Linux Administration Boot-camp</b>
           <br>March 29, 2022
           <br>ude.my/UC-fcd5c324-ad8c-4b70-a83d-b9712cb3b0f8</h3>
 
@@ -400,7 +440,7 @@
             <br>September 2020 - September 2023
             <br>Credential ID: 7BEZSG02PNEEQ83D</h3>
 
-            <h3 style="height:65px;"><b>CTECS National Readiness Skills</b>
+            <h3 style="padding-top: 60px;height:60px;"><b>CTECS National Readiness Skills</b>
               <br>2015 - Present</h3>
             </div>
 
@@ -423,12 +463,10 @@
                 <h3><a href="https://github.com/profWolfe/jameswolfeblog" target="_blank">https://github.com/profWolfe/jameswolfeblog</a></h3>
                 <h3></h3>
 
-
               </div>
             </div>
           </div>
         </center>
-
         <script>
         // Automatic Slideshow - change image every 4 seconds
         var myIndex = 0;
