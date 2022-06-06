@@ -22,6 +22,10 @@ will-change: background-position;
 animation: rotate 10s infinite linear;
 }
 
+.firstpage {
+  animation: rotate 5s infinite linear;
+}
+
 @keyframes rotate {
   from {
 		background-position: left center;
@@ -33,4 +37,14 @@ animation: rotate 10s infinite linear;
 
 .stick {
   background: linear-gradient(#407ba0, #214154, #13242f);
+}
+
+@font-face {
+  font-family: 'quicksand_bold';
+  src: url('Quicksand-Bold.otf');
+}
+
+@font-face {
+  font-family: 'd-din';
+  src: url('D-Din.otf');
 }
