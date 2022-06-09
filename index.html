@@ -9,228 +9,21 @@
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/min.css">
 </head>
-
 <body>
-  <style>
-  header {
-    overflow: hidden;
-    height: 80px;
-    width: 100%;
-    position: fixed; z-index:500; width:100%; top:0;
-  }
-  header h1 span {
-    overflow: hidden;
-    display: inline-block;
-    background: rgba(255,255,255,0.5);
-    color: #000;
-    width: 28px;
-    text-align: center;
-    margin: 0 2px;
-  }
-  header h1 a {
-    overflow: hidden;
-    color:#fff;
-    text-decoration:none;
-  }
-  header p {
-    padding: 0;
-    margin: 0;
-    font: 200 30px/80px;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    top: 5px;
-    transform: translateX(-50%);
-  }
-  header .search-icon {
-    position: absolute;
-    right: 30px;
-    top: 10px;
-    width: 65px;
-  }
-  @media only screen and (max-width: 600px) {
-    header p {display:none;}
-  }
 
-  @supports (-webkit-touch-callout: none) {
-    :root { --vht: calc(100vh - 80px);}
-  }
-
-  @supports not (-webkit-touch-callout: none) {
-    :root { --vht: 100vh;}
-  }
-  html, body {width:100%; height:var(--vht); padding:0; margin:0; overflow:hidden; background:transparent;}
-
-  .vertical {
-    width:100%;
-    height:var(--vht);
-    display:grid;
-    grid-template-columns: 100% 100%;
-    grid-template-rows: repeat(100vh);
-    position:relative;
-    overflow: hidden;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-  }
-  .vertical div.stick {
-    display:block;
-    width:100%; height:var(--vht);
-    position:sticky; top:0;
-  }
-  .vertical div:first-child {z-index:0;}
-  .vertical div.stick img {width:100%; height:var(--vht); object-fit:cover;}
-
-  .vertical div.snap {width:100%; display: grid; position:relative; left:-100%; overflow:hidden; content-visibility:auto;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-  }
-  .snap2 {
-    position: relative;
-  }
-  .vertical div.snap h3 {position:sticky; bottom:210px; width:400px; padding:10px; left:calc(50% - 200px); color:#fff; text-align:center; font:400 20px/25px arial, sans-serif;font-family: 'Courier New', monospace;}
-  .vertical div.stick h1 {position:absolute; padding:0; margin:0; bottom:30px; left:calc(50% - 160px); width:320px; background:#000; text-align:center; font:600 45px/90px Garamond, serif; color:#fff;}
-  .vertical div.snap .info {width:100%; max-width:700px; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);font-family: Garamond, serif;text-shadow: 2px 2px #000;}
-  .vertical div.snap .info h1 {padding:0px; margin:0px; font:600 100px/200px Garamond, serif; color:#fff; text-align:center;}
-  .vertical div.snap .info p {font:300 40px/90px Garamond, serif; color:#fff;}
-  </style>
-
-
-
-
+  <!--
+  counter script on top nav bar
+  -->
   <script>
   function cb(response) {
     document.getElementById('visits').innerText = response.value;
   }
   </script>
-
-
   <script async src="https://api.countapi.xyz/hit/jameswolfeblog.com/visits?callback=cb"></script>
 
-
-
-  <style>
-  #visits {
-    color:white;
-    font-size: 40px;
-  }
-  .grid {
-    text-align:center;column-gap:1;row-gap:10;padding-top: 40px;
-  }
-  .grid2 {
-    text-align:center;column-gap:1;row-gap:10;padding-top: 40px;
-  }
-  }}
-  * {box-sizing: border-box}
-  body {margin:0}
-  .mySlides {display: none}
-  img {vertical-align: middle;}
-
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 500px;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .prev {
-    margin-left: 515px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-
-  /* Caption text */
-  .text {
-    color: #000;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 8px;
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #000;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-
-  </style>
-
-  <script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
-  </script>
-
-  <!-- Navbar -->
+  <!--
+  Top navbar
+  -->
   <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -284,27 +77,15 @@
       <div id="sfcr1dejwxnblszgmly1n2aew1n7163c8sq"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=r1dejwxnblszgmly1n2aew1n7163c8sq&down=async" async></script><noscript><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=r1dejwxnblszgmly1n2aew1n7163c8sq" border="0" title="free web counter" alt="free web counter"></a></noscript>
     </div>
 
-    <style>
-    .js-scroll {
-      opacity: 0;
-      transition: opacity 500ms;
-    }
-
-    .js-scroll.scrolled {
-      opacity: 1;
-    }
-    </style>
-
+    <!--
+    Homepage
+    -->
     <center>
-      <div class="vertical" style="overflow-y: scroll;">
+      <div class="vertical">
         <div class="stick"><div id="earth"></div></div>
-        <div class="snap" id="home"><div class="info fade-in"><h1 id="firstpage" style="font-family: 'd-din';">Kronic Data</h1>
+        <div class="snap" id="home"><div class="info"><h1 id="firstpage" style="font-family: 'd-din';">Kronic Data</h1>
           <p style="font-family: 'd-din';">Portfolio | Blog | By James Wolfe</p>
-          <p>WooHoo, 100 Views! Thank you!
-          <!-- previous web counter
-          <div><img src="images/icon.jpg" style="float:center; display:inline-block;text-align: center;margin-bottom:20px;margin-left:0px"></div>
-          <div id="visits" style="float:center;text-align:center; padding-top:10px;">...</div></p>
-        -->
+          <p>WooHoo, 100 Views! Thank you!</p>
       </div>
     </div>
 
@@ -312,79 +93,106 @@
     <!--
     About Me Section
     -->
-  <div class="stick" id="aboutme"
-  style="background:#000;position:relative;"><h1
-  style="bottom:40px;font-family: 'd-din';">ABOUT ME</h1></div>
-  <div class="snap" style="padding-top:140px;display:grid;grid-template-columns: auto auto;">
+  <div class="stick" style="background:#000;"><h1 style="font-family: 'd-din';">ABOUT ME</h1></div>
+  <div class="snap" id="aboutme" style="padding-top:140px;display:grid;grid-template-columns: auto auto;">
     <div class="grid2"><h3>Hello, and welcome to my portfolio. </h3><img src="images/me.png" style="width:300px;position:absolute;margin-left:135px;"></div>
-    <div class="grid2"><h3 style="height:70px;font-family: 'd-din';">Passionate computer science major with years of computer technology experience and enthusiastic about learning. Fleshing out; developing, and publishing websites has allowed me to develop key skills required in a professional setting. Strong organizational skills, time-management, and detail-oriented skills developed from pursuing and completing many technical and non-technical works in both the professional and non-professional environments. While working in customer serivce oriented industry I've obtained team-work oriented skills that are key to growing and developing in any team environment. </h3></div>
+    <div class="grid2"><h3 style="font-family: 'd-din';">Passionate computer science major with years of computer technology experience and enthusiastic about learning. Fleshing out; developing, and publishing websites has allowed me to develop key skills required in a professional setting. Strong organizational skills, time-management, and detail-oriented skills developed from pursuing and completing many technical and non-technical works in both the professional and non-professional environments. While working in customer serivce oriented industry I've obtained team-work oriented skills that are key to growing and developing in any team environment. </h3></div>
     </div>
+
+    <!--
+    Projects slideshow script
+    -->
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
 
     <!--
     Projects <section>
     -->
     </section>
-      <div class="stick" ><div id="earth"></div><h1 style="bottom:40px;font-family: 'd-did';position:absolute;z-index:9;">PROJECTS</h1></div>
+      <div class="stick"><div id="earth"></div><h1 style="font-family: 'd-did';">PROJECTS</h1></div>
       <div class="snap" id="works">
-        <!-- Grid for pricing tables -->
-<div class="w3-row-padding" style="margin:0 -16px;padding-top:10px;">
-  <div class="w3-half w3-margin-bottom" style="padding-left:10px;">
-    <ul class="w3-ul w3-white w3-center">
-      <li class="w3-dark-grey w3-xlarge w3-padding-32">Launching Static Web Pages Utilizing Host Services</li>
-      <li class="w3-padding-16">Produced 4 static websites using github and w3schools templates and customizing with respective HTML, css, and javascript. Hosted utilizing AWS Cloud services, Azure, Surge, and Wix. The websites were also stored on github repositories. </li>
-      <li class="w3-padding-16">
-        <img src="images/website.png" style="width:400px;">
-      <li class="w3-light-grey w3-padding-24">
-        <a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank"><button class="w3-button w3-white w3-padding-large w3-hover-black">AWS Cloud</button></a>
-        <a href="https://portfolioazure.z13.web.core.windows.net/index.html" target="_blank"><button class="w3-button w3-white w3-padding-large w3-hover-black">Azure</button></a>
-        <a href="http://wolfejamesportfolio.surge.sh/" target="_blank"><button class="w3-button w3-white w3-padding-large w3-hover-black">Surge</button></a>
-        <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank"><button class="w3-button w3-white w3-padding-large w3-hover-black">Wix</button></a>
-      </li>
-    </ul>
-  </div>
+        <!-- Slideshow container -->
 
-  <div class="w3-half" style="padding-right:10px;">
-    <ul class="w3-ul w3-white w3-center">
-      <li class="w3-dark-grey w3-xlarge w3-padding-32">Raspberry Pi Headless Media Player</li>
-      <li class="w3-padding-16">Put together headless Spotify player with a Raspberry Pi 4 using a program called Volumio. The first step was to burn the Volumio OS to an micro SD card and boot on the Pi. Next step was to login to Voluimios OS, then connect to the Pi from a Volumio Application on my phone. Then install necessary plugins and connect my Spotify to the Pi. I already had the well needed serio system set up with an audio cable connecting to the PI. Then I could play away.</li>
-      <li class="w3-padding-16">
-        <img src="images/pi.jpg" style="width:200px;">
-      </li>
-      <li class="w3-light-grey w3-padding-24">
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="w3-row-padding" style="margin:0 -16px">
-<div class="w3-half w3-margin-bottom" style="padding-left:10px;">
-  <ul class="w3-ul w3-white w3-center">
-    <li class="w3-dark-grey w3-xlarge w3-padding-32">Ambilify Serverless Application</li>
-    <li class="w3-padding-16">Selected corresponding region on AWS Cloud; created Git repository utilizing the service CodeCommit and cloned it locally, then launched the main branch using the service Amplify. Steps to build the server utilizing NPM are on a to do list.</li>
-    <li class="w3-padding-16">
-      <img src="">
-    <li class="w3-light-grey w3-padding-24">
-    </li>
-  </ul>
-</div>
-<div class="w3-half w3-margin-bottom" style="padding-right:10px;">
-  <ul class="w3-ul w3-white w3-center">
-    <li class="w3-dark-grey w3-xlarge w3-padding-32">0</li>
-    <li class="w3-padding-16">0</li>
-    <li class="w3-padding-16">
-      <img src="">
-    <li class="w3-light-grey w3-padding-24">
-    </li>
-  </ul>
-</div>
-</div>
+       <div class="slideshow-container">
+         <!-- Full-width images with number and caption text -->
+         <div class="mySlides fade">
+           <img src="images/white.jpg" style="width:120%;padding-right:100px;">
+           <div class="numbertext">1 / 3</div>
+           <div class="text">
+             <div><h4 style="color:black">Launching Static Web Pages Utilizing Host Services</h4>
+             <p style="color:black">Produced 4 static websites using github and w3schools templates and customizing with respective HTML, css, and javascript. Hosted utilizing AWS Cloud services, Azure, Surge, and Wix. The websites were also stored on github repositories. </p></div>
+             <center><img src="images/website.png" style="width:300px;"></center>
+             <a href="http://awsportfolio.s3-website-us-east-1.amazonaws.com/index.html" target="_blank" style="color:black;">AWS Cloud</a>
+             <a href="https://portfolioazure.z13.web.core.windows.net/index.html" target="_blank" style="color:black;">Azure</a>
+             <a href="http://wolfejamesportfolio.surge.sh/" target="_blank" style="color:black;">Surge</a>
+             <a href="https://wolfejamesj96.wixsite.com/my-site" target="_blank" style="color:black;">Wix</a>
+             </div>
+         </div>
+         <div class="mySlides fade">
+           <div class="numbertext">2 / 3</div>
+           <img src="images/white.jpg" style="width:120%;padding-right:100px;">
+           <div class="text">
+           <div><h4 style="color:black">Raspberry Pi Headless Media Player</h4>
+           <p style="color:black">Put together headless Spotify player with a Raspberry Pi 4 using a program called Volumio. The first step was to burn the Volumio OS to an micro SD card and boot on the Pi. Next step was to login to Voluimios OS, then connect to the Pi from a Volumio Application on my phone. Then install necessary plugins and connect my Spotify to the Pi. I already had the well needed serio system set up with an audio cable connecting to the PI. Then I could play away.</p></div>
+           <center><img src="images/pi.jpg" style="width:300px;"></center>
+            </div>
+         </div>
+
+         <div class="mySlides fade">
+           <div class="numbertext">3 / 3</div>
+           <img src="images/white.jpg" style="width:120%;padding-right:100px;">
+           <div class="text">
+           <div><h4 style="color:black">Ampilify Serverless Application</h4>
+           <p style="color:black">Selected corresponding region on AWS Cloud; created Git repository utilizing the service CodeCommit and cloned it locally, then launched repository main branch using the service Amplify. Published serverless application utilizing npm.</p></div>
+            </div>
+         </div>
 </div>
 
-      <br>
+         <!-- Next and previous buttons -->
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+       </div>
+       <br>
 
-      <div style="text-align:center">
-      </div>
-
-      <div class="stick" id="certs" style="background:#000;position:relative;"><h1 style="bottom:50px;font-family: 'd-did';">CERTIFICATIONS</h1></div><div class="snap" style="margin-bottom:10px;">
+       <!-- The dots/circles -->
+       <div style="text-align:center">
+         <span class="dot" onclick="currentSlide(1)"></span>
+         <span class="dot" onclick="currentSlide(2)"></span>
+         <span class="dot" onclick="currentSlide(3)"></span>
+       </div>
+      <!--
+      Certifications Page
+      -->
+      <div class="stick" style="background:#000;"><h1 style="font-family: 'd-did';">CERTIFICATIONS</h1></div>
+      <div class="snap" id="certs" style="margin-bottom:10px;">
         <h3 style="margin-top:60px;font-family: 'd-did';"><b>Agile Scrum Fundamentals</b>
           <br>April 30, 2022
           <br>ude.my/UC-800faeff-a669-4e5b-b802-3cbb834cdd2f</h3>
@@ -401,64 +209,33 @@
                 <br>2015 - Present</h3>
               </div>
 
-              <div class="stick" id="skills"><div id="earth"></div><h1 style="bottom:70px;font-family: 'd-did';">SKILLS</h1></div><div class="snap" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">Hardware troubleshooting</h3></div>
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">Agile</h3></div>
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">Microsoft office services</h3></div>
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">AWS Cloud</h3></div>
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">Azure</h3></div>
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">Web development</h3></div>
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">Git, Github</h3></div>
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">Redhat</h3></div>
-                <div class="grid2"><h3 style="height:70px;color:#000; background-color:#fff;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';">Information technology</h3></div>
+              <!--
+              Skills Page
+              -->
+              <div class="stick"><div id="earth"></div><h1 style="font-family: 'd-did';">SKILLS</h1></div>
+              <div class="snap" id="skills" style="display:grid;grid-template-columns: auto auto auto;margin-top:90px;">
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">Hardware troubleshooting</h3></div>
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">Agile</h3></div>
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">Microsoft office services</h3></div>
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">AWS Cloud</h3></div>
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">Azure</h3></div>
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">Web development</h3></div>
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">Redhat</h3></div>
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">Git, Github</h3></div>
+                <div class="grid2"><h3 style="background:black;box-shadow:3px 6px rgba(0, 0, 0, 0.3);font-family: 'd-did';font-size:28px;border-radius: 100px;">Information technology</h3></div>
               </div>
 
-              <div class="stick" id="contact"style="background:#000;"><h1 style="bottom:50px;font-family: 'd-did';">CONTACT ME</h1></div><div class="snap">
-                <div><h3 style="padding-top:280px;font-family: 'd-did';">(703)789-0919</h3>
+              <div class="stick" id="contact"style="background:#000;"><h1 style="font-family: 'd-did';">CONTACT ME</h1></div>
+              <div class="snap">
+                <div>
+                  <h3 style="padding-top:280px;font-family: 'd-did';">(703)789-0919</h3>
                   <h3 style="font-family: 'd-did';">Wolfe.James.J96@gmail.com</h3>
                   <h3 style="font-family: 'd-did';"><a href="https://www.linkedin.com/in/james-wolfe-6420151aa/" target="_blank">https://www.linkedin.com/in/james-wolfe-6420151aa/</a></h3>
                   <h3 style="font-family: 'd-did';"><a href="https://github.com/profWolfe/jameswolfeblog" target="_blank">https://github.com/profWolfe/jameswolfeblog</a></h3>
                   <h3></h3>
-
                 </div>
               </div>
             </div>
           </center>
-          <script>
-          // Automatic Slideshow - change image every 4 seconds
-          var myIndex = 0;
-          carousel();
-
-          function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}
-            x[myIndex-1].style.display = "block";
-            setTimeout(carousel, 8000000);
-          }
-
-          // Used to toggle the menu on small screens when clicking on the menu button
-          function myFunction() {
-            var x = document.getElementById("navDemo");
-            if (x.className.indexOf("w3-show") == -1) {
-              x.className += " w3-show";
-            } else {
-              x.className = x.className.replace(" w3-show", "");
-            }
-          }
-
-          // When the user clicks anywhere outside of the modal, close it
-          var modal = document.getElementById('ticketModal');
-          window.onclick = function(event) {
-            if (event.target == modal) {
-              modal.style.display = "none";
-            }
-          }
-          </script>
-
         </body>
         </html>
