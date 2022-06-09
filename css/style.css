@@ -39,8 +39,7 @@ animation: rotate 10s infinite linear;
 }
 
 .stick {
-  background: rgb(0,0,0);
- background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(61,30,9,1) 47%, rgba(105,85,25,0.8309524493391106) 91%, rgba(150,94,11,0.7973390039609594) 100%);
+  background: #f7f6f0;
 }
 
 /*
@@ -170,6 +169,7 @@ Projects Slideshow
   max-width: 1000px;
   position: relative;
   margin: auto;
+  top:55px;
 }
 
 /* Hide the images by default */
@@ -197,13 +197,8 @@ Projects Slideshow
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  color:black;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
 /* Caption text */
 .text {
   color: #f2f2f2;
