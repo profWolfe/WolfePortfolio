@@ -327,6 +327,10 @@ p {
 /* End Services Section */
 
 /* Projects section */
+.projects_links{
+	color:white;
+	text-decoration: underline;
+}
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
