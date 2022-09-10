@@ -420,7 +420,6 @@ p {
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 100px 20px;
 }
 #about .col-left {
 	width: 250px;
@@ -436,16 +435,14 @@ p {
 	margin-bottom: 10px;
 }
 #about .col-right p {
-	margin-bottom: 20px;
 }
 #about .col-right .cta {
 	color: black;
-	margin-bottom: 50px;
 	padding: 10px 20px;
 	font-size: 2rem;
 }
 #about .col-left .about-img {
-	height: 100%;
+	height: 85%;
 	width: 100%;
 	position: relative;
 	border: 10px solid white;
@@ -454,8 +451,6 @@ p {
 	content: '';
 	position: absolute;
 	left: -33px;
-	top: 19px;
-	height: 98%;
 	width: 98%;
 	border: 7px solid crimson;
 	z-index: -1;
