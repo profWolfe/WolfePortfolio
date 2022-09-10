@@ -1,0 +1,52 @@
+<style>
+  #container p {
+    display: inline;
+  }
+</style>
+<div id=container>
+<p>Steps Followed:<br>
+  https://aws.amazon.com/blogs/mobile/build-a-serverless-full-stack-registration-app-in-minutes-using-aws-amplify/</p>
+<p><br><br>1. Find the type of application you want to develop for your serverless website.
+  <br>2. After researching, I found an application like word processor to use for the website.
+  <br>3. Found a template on codepen.<br>
+	<li>How to install and configure the Amplify CLI.
+	<li>How to create an API that takes in user data and is called from our frontend.
+	<li>How to add an AWS Lambda function to our API so that data is persisted in Amazon DynamoDB.
+	<li>How to build, deploy, and host the application using Amplify Hosting.
+<br>4. Install npm for amplify cli in application folder
+	<li>Commands used:
+	<li><mark>npm install</mark>
+	<li><mark>npm install -g @aws-amplify/cli</mark>
+<br>5. Configure amplify and login to your root AWS Cloud account to set up and configure an amplify server.
+	<li>Commands used:
+	<li><mark>amplify configure</mark>
+	<li>Configurations:
+  <li>Region used: us-easy-1
+	<li>Username used: user
+	<li>Permissions: AdministratorAccess-Amplify
+	<li>Secret Key: #
+	<li>Access Key: #
+<br>6. Initialize the Amplify framework for the registration application using the following command.
+	<li>Commands used:
+	<li><mark>amplify init</mark>
+<br>7. Add REST API for backend
+	<li>Family name: wordprocessor
+	<li>Path: /id
+	<li>AWS Lamda function name: wordfunction
+	<li>RunTime: NodeJS
+	<li>Function Template: CRUD function for DynamoDB
+	<li>Create new DynamoDB table
+	<li>Name: wordprocessor
+	<li>Table name: wordprocessor
+	<li>Edit any configurations or settings: no
+<br>8. Push folder to amplify
+	<li>Commands used:
+	<li><mark>amplify push</mark>
+<br>9. Hosting and publish configurations
+	<li>Commands used:
+	<li><mark>amplify add hosting</mark>
+  <li><mark>amplify publish</mark>
+	<li>Plugin used: CloudFront and S3
+	<li>Environment setup: PROD (S3 with CloudFront using HTTPS)
+	<li>Bucket name: dev
+</div>

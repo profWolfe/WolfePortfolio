@@ -9,6 +9,17 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 }
+  a:link, a:visited {
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover, a:active {
+    background-color: black;
+  }
 a {
 	text-decoration: none;
 }
@@ -357,7 +368,7 @@ p {
 	border-radius: 10px;
 }
 #projects .project-info {
-	padding: 30px;
+	padding: 10px;
 	flex-basis: 50%;
 	height: 100%;
 	display: flex;
