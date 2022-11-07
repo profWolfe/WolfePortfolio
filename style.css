@@ -11,6 +11,7 @@ html {
 }
   a:link, a:visited {
     color: white;
+	font-size: 12px;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
@@ -344,7 +345,7 @@ p {
 }
 #projects .projects {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1300px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
