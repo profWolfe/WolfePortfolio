@@ -348,7 +348,8 @@ p {
 #services .service-item 
 {
 	flex-basis: 80%;
-	width: 200px; 
+	width: 1700px;
+	height:100%; 
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -794,7 +795,7 @@ p {
 	}
 
 	#services .service-bottom .service-item {
-		flex-basis: 90%;
+		flex-basis: 20%;
 		margin: 1.5%;
 	}
 }
