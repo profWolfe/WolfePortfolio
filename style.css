@@ -22,9 +22,7 @@ a:visited {
 }
 
 a:hover,
-a:active {
-	background-color: black;
-}
+
 
 a {
 	color: lightblue;
