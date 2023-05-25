@@ -21,9 +21,9 @@
           </div>
           <ul>
             <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Certifications</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#about" data-after="Service">About Me</a></li>
+            <li><a href="#services" data-after="Projects">Certifications</a></li>
+            <li><a href="#projects" data-after="About">Projects</a></li>
             <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
         </div>
@@ -54,6 +54,25 @@
     </div>
   </section>
   <!-- End Hero Section  -->
+
+   <!-- About Me Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="images/me.jpg"></img>
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>me</span></h1>
+        <h2>About Me</h2>
+        <p>Problem-solver with computer science degree. I love to grow and develop key technical skills. I'm highly motivated and have an eagerness to learn. I'm looking or positions where I can apply my skills and interests that allows me to develop professionaly. I am open to different industries and positions that provide growth and a possitive environment. 
+        </p>
+        <a href="JamesWolfe_Resume.pdf" target="_blank" class="cta">Download Resume</a>
+      </div>
+    </div>
+  </section>
+   <!-- End About Me Section -->
 
   <!-- Service Section -->
   <section id="services">
@@ -90,11 +109,6 @@
           <p>Organization: Udemy
             <br>
             Date Issued: April 30, 2022
-          </p>
-        </div>
-        <div class="service-item">
-          <h2 style="height: 30%;">Pursuing: Google Data Anaylst</h2>
-          <p>Date Started 4/29/2023
           </p>
         </div>
       </div>
@@ -187,53 +201,54 @@
   </section>
   <!-- End Projects Section -->
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-        </div>
-      </div>
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>About Me</h2>
-        <p>As a passionate problem-solver I love to grow key technical skills required to thrive in a professional work environment. I'm a recent computer science graduate who is highly motivated and eager to learn. I'm looking or positions where I can apply my skills and interests that allows me to develop professionaly. I am open to different industries and positions that provide growth and a possitive environment. 
-        </p>
-        <a href="JamesWolfe_Resume.pdf" target="_blank" class="cta">Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
-
   <!-- Contact Section -->
   <section id="contact">
     <div class="contact container">
+      <link href="contact-form.css" rel="stylesheet">
+      <?php include 'contact-form-process.php';?>
+
+<div class="fcf-body">
+
+    <div id="fcf-form">
+    <h3 class="fcf-h3">Contact Me</h3>
+
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your name</label>
+            <div class="fcf-input-group">
+                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your email address</label>
+            <div class="fcf-input-group">
+                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+
+        <div class="fcf-credit" id="fcf-credit">
+        Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+        </div>
+
+    </form>
+    </div>
+
+</div>
       <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>(703)789-0919</h2>
-          </div>
         </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>Wolfe.James.J96@gmail.com</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>United States, Northern Virginia</h2>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
   <!-- End Contact Section -->
@@ -241,7 +256,7 @@
   <!-- Footer -->
   <section id="footer">
     <div class="footer container">
-      <p>Copyright © 2022 . All rights reserved</p>
+      <p>Copyright © 2023 . All rights reserved</p>
     </div>
   </section>
   <!-- End Footer -->
